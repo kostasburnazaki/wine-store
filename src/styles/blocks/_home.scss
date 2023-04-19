@@ -1,0 +1,114 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 146px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: $mainText;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    @include onTablet {
+      flex-direction: column;
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &-title {
+      max-width: 700px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 84px;
+      line-height: 110%;
+    }
+  }
+
+  &__catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+
+    &-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    &-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+
+      @include onTablet {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    &-input {
+      width: 100%;
+      max-width: 512px;
+      height: 56px;
+      padding: 0 32px;
+
+      border-radius: 80px;
+      border: 1px solid $borderColor;
+
+      &::placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &-button {
+      max-width: 247px;
+      width: 100%;
+      height: 56px;
+
+      color: $redPrime;
+
+      border-radius: 80px;
+      border: 1px solid $redPrime;
+      background-color: #fff;
+    }
+  }
+
+  &__button {
+    margin-top: 12px;
+    width: 200px;
+    height: 56px;
+  
+    background-color: $redPrime;
+    border-color: $redPrime;
+    color: #fff;
+  
+    font-family: 'Open Sans', sans-serif;
+  
+    border-radius: 80px;
+    border: 1px solid $redish;
+    @include buttonHoverEffect;
+  }
+}

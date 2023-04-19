@@ -1,0 +1,78 @@
+.form {
+    height: 700px;
+    max-width: 780px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #fff;
+    font-family: 'Libre Baskerville', serif;
+
+    &__title {
+        padding: 32px 0;
+
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__input {
+        width: 100%;
+        height: 56px;
+        padding: 0 32px;
+
+        font-size: 20px;
+
+        border: 1px solid #A9A9B0;
+        outline: none;
+        border-radius: 80px;
+
+        &:focus {
+            border-color: $redPrime;
+        }
+    }
+
+    &__error {
+        width: 80%;
+        height: 18px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 12px;
+        margin: 0 auto 16px;
+
+        border-radius: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        background: $redPrime;
+        color: #fff;
+
+        &:empty {
+            background-color: #fff;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        padding: 15px 45px;
+
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #ffff;
+
+        background-color: $redPrime;
+
+        border-radius: 80px;
+        border: 1px solid $redish;
+        @include buttonHoverEffect
+    }
+}

@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $navbarHeight;
+  color: $secondaryGrey;
+  min-width: 320px;
+  padding: 0 $horizontalLimit;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+
+  @media (max-width: $navbarCollapse) {
+    padding: 0 32px;
+  }
+
+  &__logo {
+    padding-right: 33%;
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $navbarCollapse) {
+      position: fixed;
+      z-index: 1;
+      top: -100vh;
+      left: 0;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: grey;
+      transition: 1s;
+      transform: none;
+
+      &--responsive {
+        transform: translateY(100vh);
+      }
+    }
+  }
+
+  &__link {
+    margin: 0 8px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $mainText;
+    }
+
+    &:visited {
+      color: unset;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+
+
+    @media (max-width: $navbarCollapse) {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &--close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    &--styled {
+      padding: 16px 36px;
+      justify-self: end;
+
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      color: #ffff;
+      font-weight: 600;
+
+      background-color: $redPrime;
+
+      border-radius: 80px;
+      border: 1px solid $redish;
+      @include buttonHoverEffect;
+    }
+  }
+}

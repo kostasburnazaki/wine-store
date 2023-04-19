@@ -1,0 +1,39 @@
+@mixin onDesktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  
+  @mixin onTablet {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @mixin onMobile {
+    @media (max-width: 414px) {
+      @content;
+    }
+  }
+  
+  @mixin increaseOnHover {
+    transition: transform $animationSpeed;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @mixin styledBorder {
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 $redish;
+  }
+
+  @mixin buttonHoverEffect {
+    transition: all $animationSpeed;
+
+    &:hover {
+        background-color: #ffff;
+        color: $redish;
+    }
+  }
