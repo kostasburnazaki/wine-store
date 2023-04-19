@@ -1,6 +1,7 @@
 {
   "name": "wine-store",
   "version": "0.1.0",
+  "homepage": "https://kostasburnazaki.github.io/public/index.html",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,7 +12,6 @@
     "@types/react-dom": "^18.0.11",
     "classnames": "^2.3.2",
     "formik": "^2.2.9",
-    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -22,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^18.0.35"
+    "@types/react": "^18.0.35",
+    "gh-pages": "^5.0.0"
   }
 }
