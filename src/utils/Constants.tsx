@@ -7,6 +7,7 @@ export const regPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16
 
 export const initValues = {
   currentSlide: 1,
+  currentPage: 1,
   items: [{
     image: '',
     wine: '',

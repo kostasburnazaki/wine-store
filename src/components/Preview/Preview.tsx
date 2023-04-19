@@ -2,7 +2,6 @@ import { FC, useContext, useState } from "react"
 import { ItemsContext } from "../../utils/ItemsContext";
 import { Item } from "../../types/Item"
 import { CardPreview } from "../CardPreview"
-import { Pagination } from "../Pagination"
 import { initValues, maxItemsPerSlide, standartCardWidth } from "../../utils/Constants"
 
 export const Preview: FC = () => {
