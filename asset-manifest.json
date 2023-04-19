@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wine-store/static/css/main.33f88add.css",
-    "main.js": "/wine-store/static/js/main.687d8cc1.js",
+    "main.js": "/wine-store/static/js/main.12d55522.js",
     "static/media/intro-bottle.png": "/wine-store/static/media/intro-bottle.3a7d95b3b1970e21138a.png",
     "static/media/Logo.svg": "/wine-store/static/media/Logo.3529e2723d47ae7d21f526e307809f82.svg",
     "index.html": "/wine-store/index.html",
@@ -11,10 +11,10 @@
     "static/media/star-active.svg": "/wine-store/static/media/star-active.4754875e94609a96a0a2.svg",
     "static/media/star.svg": "/wine-store/static/media/star.8716d6d6660680060174.svg",
     "main.33f88add.css.map": "/wine-store/static/css/main.33f88add.css.map",
-    "main.687d8cc1.js.map": "/wine-store/static/js/main.687d8cc1.js.map"
+    "main.12d55522.js.map": "/wine-store/static/js/main.12d55522.js.map"
   },
   "entrypoints": [
     "static/css/main.33f88add.css",
-    "static/js/main.687d8cc1.js"
+    "static/js/main.12d55522.js"
   ]
 }
