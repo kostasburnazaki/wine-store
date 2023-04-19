@@ -3,14 +3,13 @@ import {
     useContext,
   } from 'react';
 import { Item } from '../types/Item';
-import { initValues } from './Constants';
   
   type ItemsContextType = {
-    items: Item[],
+    items: Item[] | null,
   };
   
   export const ItemsContext = createContext<ItemsContextType>({
-    items: initValues.items,
+    items: null,
   });
   
   export const useItemsContext = () => useContext(ItemsContext);

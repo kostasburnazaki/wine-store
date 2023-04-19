@@ -1,6 +1,5 @@
 import { FC, useContext, useState } from "react"
 import { Card } from "../Card";
-import { Item } from "../../types/Item";
 import { Search } from "../Search";
 import { ItemsContext } from "../../utils/ItemsContext";
 import { Pagination } from "../Pagination";
@@ -14,13 +13,19 @@ export const Catalog: FC = () => {
 
   const indexOfLastCourse = currentPage * itemsPerPage;
   const indexOfFirstCourse = indexOfLastCourse - itemsPerPage;
-  const currentItems = items.slice(indexOfFirstCourse, indexOfLastCourse);
+  const currentItems = items?.slice(indexOfFirstCourse, indexOfLastCourse);
+
+  if (!items) {
+    return (
+      <h1>Loading</h1>
+    )
+  }
 
   return (
     <>
       <Search />
       <div className="cards">
-        {currentItems.map(item => {
+        {currentItems?.map(item => {
           return (
             <Card key={item.code} item={item} />
           );
@@ -28,7 +33,7 @@ export const Catalog: FC = () => {
       </div>
       <Pagination
         itemsPerSlide={itemsPerPage}
-        totalSlides={items.length}
+        totalSlides={items?.length}
         paginate={setCurrentPage}
         currentSlide={currentPage}
       />

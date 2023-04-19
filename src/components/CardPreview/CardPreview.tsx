@@ -6,9 +6,9 @@ type Props = {
   item: Item;
 }
 
-export const CardPreview: FC<Props> = ({ item: { image, wine, code, country, year } }) => {
+export const CardPreview: FC<Props> = ({ item: { image, wine, code, location, id } }) => {
   return (
-    <NavLink className="cards__link" to={`/catalog/${code}`}>
+    <NavLink className="cards__link" to={`/catalog/${id}`}>
       <div className="cards__card">
         <img
           className="cards__product-image"
@@ -22,11 +22,7 @@ export const CardPreview: FC<Props> = ({ item: { image, wine, code, country, yea
 
         <div className="cards__product-details">
           <span className="cards__product-country">
-            {country}
-          </span>
-
-          <span className="cards__product-year">
-            {year}
+            {location}
           </span>
         </div>
 

@@ -24,6 +24,7 @@ export const Navbar: FC = () => {
                 <div className="navbar__nav-section">
                     <NavLink className="navbar__link" to={'/catalog'} onClick={showNavbar}>Catalog</NavLink>
                     <NavLink className="navbar__link" to={'/home'} onClick={showNavbar}>About</NavLink>
+                    <NavLink className="navbar__link" to={'/bucket'} onClick={showNavbar}>Bucket</NavLink>
                 </div>
 
                 <div className="navbar__nav-section">

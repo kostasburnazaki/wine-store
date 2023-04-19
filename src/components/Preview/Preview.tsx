@@ -14,12 +14,12 @@ export const Preview: FC = () => {
 
   const indexOfLastCourse = currentSlide * itemsPerSlide;
   const indexOfFirstCourse = indexOfLastCourse - itemsPerSlide;
-  const currentItems = items.slice(indexOfFirstCourse, indexOfLastCourse);
+  const currentItems = items?.slice(indexOfFirstCourse, indexOfLastCourse);
 
   return (
     <div className="preview">
       <ul className="preview__slides">
-        {currentItems.map((item: Item) => {
+        {currentItems?.map((item: Item) => {
           return (
             <CardPreview item={item} />
           )

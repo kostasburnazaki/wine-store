@@ -7,10 +7,10 @@ type Props = {
     item: Item;
 }
 
-export const Card: FC<Props> = ({ item: { image, wine, code, country, year, rating, price } }) => {
+export const Card: FC<Props> = ({ item: { image, wine, id, location, year, rating, price } }) => {
   const roundedRating = Math.round(rating.average);
     return (
-        <NavLink className="cards__link" to={`/catalog/${code}`}>
+        <NavLink className="cards__link" to={`/catalog/${id}`}>
             <div className="cards__card">
                 <img
                     className="cards__product-image"
@@ -36,7 +36,7 @@ export const Card: FC<Props> = ({ item: { image, wine, code, country, year, rati
 
                 <div className="cards__product-details">
                     <span className="cards__product-country">
-                        {country}
+                        {location}
                     </span>
 
                     <span className="cards__product-year">

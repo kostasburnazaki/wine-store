@@ -5,15 +5,14 @@ import {
   useContext,
 } from 'react';
 import { Item } from '../types/Item';
-import { initValues } from './Constants';
 
 type BucketContextType = {
-  bucket: Item[],
-  setBucket: Dispatch<SetStateAction<Item[]>>,
+  bucket: Item[] | null,
+  setBucket: Dispatch<SetStateAction<Item[] | null>>,
 };
 
 export const BucketContext = createContext<BucketContextType>({
-  bucket: initValues.items,
+  bucket: null,
   setBucket: () => {},
 });
 

@@ -10,8 +10,8 @@ export const Product: FC = () => {
   const { productCode = 0 } = useParams();
   const { items } = useItemsContext();
   const navigate = useNavigate();
-  const item = items.find((item: Item) => {
-    return item.code === +productCode;
+  const item = items?.find((item: Item) => {
+    return item.id === +productCode;
   })
 
   return (
@@ -37,17 +37,12 @@ export const Product: FC = () => {
 
           <div className="product__section">
             <span className="product__subtitle">Winary</span>
-            <span className="product__winary-value">Poggio Al Sale</span>
-          </div>
-
-          <div className="product__section">
-            <span className="product__subtitle">Grapes</span>
-            <span className="product__value">Sangiovese</span>
+            <span className="product__winary-value">{item?.winery}</span>
           </div>
 
           <div className="product__section">
             <span className="product__subtitle">Country</span>
-            <span className="product__value">{item?.country}</span>
+            <span className="product__value">{item?.location}</span>
           </div>
           <div className="product__section">
             <span className="product__subtitle">Alcohol Content</span>
